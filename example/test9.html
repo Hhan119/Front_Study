@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test.html</title>
+</head>
+<body>
+    <input type="text" id="inputMsg" placeholder="문자열 입력...">
+    <button id="printBtn">출력하기</button>
+    <input type="text" id="target" value="">
+</body>
+<script>
+    document.querySelector("#printBtn").addEventListener("click", ()=>{ 
+        let input = document.querySelector("#inputMsg").value;
+        document.querySelector("#target").value=input;
+    });
+</script>
+</html>

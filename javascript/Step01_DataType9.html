@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType9.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <p><strong>functinon</strong>type의 영역(scope)</p>
+    <script>
+        // 페이지 로딩 시점에 실행되는 영역은 global영역(전역)입니다.
+        // global 영역에 정의된 자원들은 어디서나 사용이 가능하다.
+
+        let myName="첼시";
+
+        function test(){
+            //함수의 총괄호 안에 속한 영역은 local 영역입니다.
+            //local 영역 안에 정의된 자원은 해당 local 영역 내에서만 사용 할 수 있다.
+        let yourName="맨시티";
+        console.log(yourName);
+        }
+
+        function test2(){
+            //local 영역 내에서는 외부 영역에 정의된 자원들을 사용 할 수 있다.
+            console.log(myName);
+        }
+    </script>
+</body>
+</html>

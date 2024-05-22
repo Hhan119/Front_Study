@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType12.html</title>
+</head>
+<body>
+    <H1>function tpye의 매개변수</H1>
+    <p>
+        함수를 call 하면서 매개변수에 function type을 전달하는 경우도 많다.
+    </p>
+    <button onclick="sleep()">잠자기</button>
+    <script>
+        // 변수 대입시 동작 실행됨
+        let enterRoom = function(action){
+            console.log("room에 들어갑니다.")
+            action()
+        };
+
+        // 함수를 call 하면서 함수 내부에서 사용될 예정인 함수 전달하기 
+        enterRoom(function(){
+            console.log("enterRoom 청소를 합니다.")
+        });
+
+        //방에 들어가서 게임을 해보세요.
+        enterRoom(function(){
+            console.log("게임합니다.")
+        });
+    
+        function sleep(){
+                enterRoom(()=>{
+                console.log("잠을 잡니다.")
+                });
+        }
+
+        /*
+        setTimeout(function(){}, 1000*60);
+
+        document.querySelector("#???"){             // ??? 참조값에 click이라는 event 발생시 function()을 실행한다는 의미
+        .addEventListener("click", function(){}) 
+    }*/
+    </script>
+</body>
+</html>

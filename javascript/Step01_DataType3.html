@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType3.html</title>
+</head>
+<body>
+    <script>
+    /*
+        한명의 회원정보를 다루고자 한다.
+        번호, 이름, 남자인지 여부
+    */
+
+    // 번호는 1이고 이른은 첼시이고 성별은 남자인 회원의 정보를 변수 3개에 각각 담아 보세요.
+    
+    let num=1;
+    let isman="남자";
+    let name="첼시"
+
+    // object 값은 하나의 변수의 여러가지 하위 변수를 묶을수 있다.
+    let mem1 = {num:1, name:"첼시", isman:true};
+    
+
+    let a=mem1;
+    let b=mem1.name;
+    let c=mem1.num;
+    let d=mem1.isman;
+
+    let mem2={};
+    mem2.num=2;
+    mem2.name="레알";
+    mem2.isman=false;
+
+    let mem3= {num:num, name:name, isman:isman};
+    
+    let mem4= {num, name, isman};
+
+    let memS={
+        num:3,
+        num:4,
+        name:"맨시티",
+        name:"뮌헨",
+        isman:"woman"
+    }
+
+    
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test.html</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>외부 javascript 실행</h1>
+    <!-- 
+        로딩할 외부 javascript의 위치를 src="위치" src속성의 value로 명시하면
+        웹브라우저가 해당 javascript 파일을 읽어들여서 로딩한다.
+    -->
+    <button onclick id="myBtn">확인</button>
+
+    <div id="one">one</div>
+    <script src="test.js"></script>
+    <script src="test02.js"></script>
+
+    <p id="one"></p>
+</body>
+</html>

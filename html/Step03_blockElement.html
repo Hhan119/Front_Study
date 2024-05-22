@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_blockElement.html</title>
+    <style>
+        /* 모든 div 요소에 적용할 CSS
+           * div, one, two(>는 자식요소 반영)는 선택자(selector)*/
+        div{   
+            background-color: antiquewhite;
+        }
+        /* id가 one인 요소에 적용함 CSS */
+        #one{
+            color: blue;
+        }
+        /* id가 two 인 요소의 자식 중에서 img에 적용할 CSS */
+        #two > img{
+            border-width: 20px;
+            border-style: solid;
+            border-color:lightcoral;
+        }
+        #three > img{
+            width: 200px;
+            background-color: pink;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div>div 요소는 문단을 나타낼때 사용한다.</div>
+    <div id="one">문단에 해당하는 것은 문자열 뿐만이 아니고 다른 여러가지 요소도 될 수 있다</div>
+    <div>div 요소는 폭을 100% 차지하는 block 요소이다.</div>
+    <div id="two">
+        <!-- dl div 요소는 2개의 img 요소를 자식 요소로 가지고 있다.-->
+        <img src="images/kingKong.jpg">
+        <img src="images/kingKong.jpg">
+    </div>
+    <div id="three">
+        <img src="images/image1.png">
+        <img src="images/image2.png">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_inlineElement.html</title>
+    <style>
+        /* #은 id의 적용 */
+        #one{
+            color: pink;
+        }
+        /* .은 class의 적용 */
+        .text-bold{
+            font-weight: bold;
+        }
+        .block-element{
+            display: block; /* inline | block | inline-block | none */
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline 요소에 대해 알아보기</h1>
+    <span>하나</span>
+    <span>둘</span>
+    <span>세엣</span>
+    <p>나의 이름은 <span id="one">첼시</span>입니다.</p>            <!-- element.styles에 Padding 크기는 Auto로 선택됨-->
+    <p>나의 이름은 <span class="text-bold">해골</span>입니다.</p>   <!-- p는 block 요소이고 span은 inline 요소인데 block 요소가 inline 아래로 두는것이 당연함-->
+    <p>나의 이름은 <span class="text-bold">호랑이</span>입니다.</p> <!-- inline 요소는 block 요소를 아래 둘 수 없음, 단 예외는 있음-->
+
+    <h2>기본 스타일을 가지고 있는 인라인 요소</h2>
+    <p>천리길도 <b>한걸음</b> 부터</p>                              <!-- b 요소는 단순히 굵은 글씨-->
+    <p>천리길도 <strong>한걸음</strong> 부터</p>                    <!-- strong 요소는 굵은 글씨 + 강조의 의미도 가지고 있음-->
+
+    
+    <p>여러분 <i>즐거운</i> 프로그래밍이 시작 되었어요.</p>           <!-- i 요소는 단순히 이텔릭체-->
+    <p>여러분 <em>즐거운</em> 프로그래밍이 시작 되었어요.</p>         <!-- em 요소는 이텔릭체 + 강조의 의미도 가지고 있음-->
+                                                                   <!-- *강조에 의미는 음성으로 읽어줄때 강하게 발음해줌* -->
+    <span class="block-element">첫번째</span>
+    <span class="block-element">두번째</span>
+    <span class="block-element">세번째</span>
+
+</body>
+</html>

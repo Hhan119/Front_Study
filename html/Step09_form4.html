@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form4.html</title>
+    <style>
+        textarea{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>폼 요소에 기본 값 설정하기</h1>
+    <p>
+        서버에서 클라이언트에게 Form을 응답할 떄 이미 저장된 값을
+        출력한채로 응답을 해야 할 때가 있다.
+        예를들어 회원 가입된 정보 보기로 이동한다면,
+        DB에 이미 저장된 내용을 출력 해줘야 한다.
+    </p>
+    <form action="update.jsp">
+        이메일 <input type=email name="email" value="chelsea@naver.com"><br>
+    <label for="job">직업</label>
+    <select name="job" id="job">
+        <option value="">선택</option>
+        <option value="programmer" selected>프로그래머</option>
+        <option value="doctor">의사</option>
+        <option value="pianist">피아니스트</option>
+        <option value="etc">기타</option>
+    </select>
+
+    
+    <fieldset>
+        <legend>취미 정보 선택</legend>
+        <label>
+        <input type="checkbox" name="hobby" value="soccer" checked> 축구    
+        </label>
+        <label>
+        <input type="checkbox" name="hobby" value="baking" > 베이킹
+        </label>
+        <label>
+        <input type="checkbox" name="hobby" value="piano" > 피아노
+        </label>
+        <label>
+        <input type="checkbox" name="hobby" value="etc" > 기타
+        </label>
+    </fieldset>
+    하고 싶은 말 
+    <br>
+    <textarea name="comment" rows="10" >안녕하세요 초기값입니다.
+                                        첼시
+                                        레알마드리드
+                                        맨체스터시티
+                                        바르셀로나
+
+    </textarea>   <!--textarea는 inner text에 작성 해야하고, 위치는 text 원하는 위치대로 표시됨.-->
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form2.html</title>
+</head>
+<body>
+    <div class="container">
+        <h1>회원 가입 폼 입니다.</h1>
+        <form action="signup.jsp">
+            <label for="email">&nbsp;&nbsp;&nbsp;이메일</label>
+            <input type="text" id="email" name="email"><br>
+            <label for="pwd">비밀번호</label>
+            <input type="password" id="pwd" name="pwd">
+
+            <fieldset>                                                      <!-- 포커스가 왔을 떄, 남자/여자 음성으로 구분하기 위헤 필요한 값-->
+            <legend align="center">성별 선택</legend>
+            <label>                                                         <!-- value는 서버로 전달해주기 위해 필요한 값-->
+            <input type="radio" name="gender" value="man" checked> 남자     <!--checked는 defualt 선택을 위한 값-->
+            </label>                                                        <!-- radio는 문자열을 그룹으로 묶음, checkbox는 그룹으로 묶지 않아서 여러개 선택 가능함-->
+            <label>                                                         <!-- label 안에 input에 문자열이 있어서 자동으로 문자열을 인식하여 label 작성 불필요함-->
+            <input type="radio" name="gender" value="woman" > 여자          <!-- name 속성 값이 다르면 두개 선택됨, name 값은 같아야 그룹으로 묶임-->
+            </fieldset>
+
+            <fieldset>
+                <legend>취미 정보 선택</legend>
+                <label>
+                <input type="checkbox" name="hobby" value="soccer" > 축구    
+                </label>
+                <label>
+                <input type="checkbox" name="hobby" value="baking" > 베이킹
+                </label>
+                <label>
+                <input type="checkbox" name="hobby" value="piano" > 피아노
+                </label>
+                <label>
+                <input type="checkbox" name="hobby" value="etc" > 기타
+                </label>
+            </fieldset>
+          
+            <br>
+
+            <label for="job">직업</label>
+            <select name="job" id="job">
+                <option value="">선택</option>
+                <option value="programmer">프로그래머</option>
+                <option value="doctor">의사</option>
+                <option value="pianist">피아니스트</option>
+                <option value="etc">기타</option>
+            </select>
+            <br>
+            <label for="lunch">점심 선택</label>
+            <!-- option의 value가 없으면 innertext가 전송된다.-->
+            <select name="lunch" id="lunch">
+                <optgroup label="분식">
+                    <option>라면</option>
+                    <option>쫄면</option>
+                    <option>김밥</option>
+                </optgroup>
+                <optgroup label="중식">
+                    <option>자장면</option>
+                    <option>짬뽕</option>
+                    <option>탕수육</option>
+                </optgroup>
+            </select>
+            
+            <br>
+            <label for="myFile">첨부파일</label>
+            <input type="file" id="myFile" name="myFile"></input>
+            <br>
+            <label for="comment">하고 싶은말</label>
+            <textarea name="comment" id="comment"></textarea>
+            <br>
+            <button type="submit">가입</button>
+        </form>
+
+
+
+
+    </div>
+    
+</body>
+</html>

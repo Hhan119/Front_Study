@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_ControlStatement.html</title>
+</head>
+<body>
+    <h1>조건부로 실행되는 if 문 블럭 구성하기</h1>
+    <p id="one"></p>
+    <p id="two"></p>
+    <script>
+        let name = prompt("이름을 입력하세요.");
+        if(name == "첼시"){
+            document.querySelector("#one").innerText="첼시";
+        }
+        if(name != "첼시"){
+            document.querySelector("#one").innerText="맨시티";
+        }
+        
+
+        // 비교하는 code가 복잡한 경우에 따로 비교를 해서 결과를 얻어내서 
+        let isEqual = name == "첼시";
+
+        // 결과 값을 if문 안에서 사용 할수도 있다.
+        if(isEqual){
+            document.querySelector("#two").innerText="레알마드리드"
+          
+            }
+        
+    
+    </script>
+    
+</body>
+</html>

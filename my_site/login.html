@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea FC Login page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-form" align="center" >
+        <div class="login-header">
+            <a href="https://naver.com" class="logo">
+            <h1 class="blind">CHELSEA</h1></a>
+        </div>
+
+
+        <div class="login-container">
+            <h1>CHELSEA</h1>
+          
+                <div class="login-info">
+                    <div class="login"></div>
+                    <label class="loginId" for="login_id" id="loginId">아이디</label>
+                    <input type="text" id="loing_Id" placeholder="ID" value=""></label>
+                        <div class="id"></div>
+               
+                
+                <div class="login-info">
+                    <div class="login"></div>
+                    <label class="login_pwd" for="login_pwd" id="PWD">비밀번호</label>
+                    <input type="password" id="loing_Pwd" placeholder="PASSWORD"></label>
+                    <div class="pwd"></div> 
+
+                    <button onclick type="submit" id="loginBtn">로그인</button>
+                    <button onclick id="infoAdd">회원가입</button> 
+                </div>
+                </div>
+            
+        <div class="login-footer">
+            <h3>현재시간</h3>
+            <span id="now">00:00:00</span>
+            <span id="arm"></span>
+            <h3>남은시간</h3>
+            <span id="timer"></span>
+        </div>
+   
+         </div>
+
+    <script>
+        function today(){
+        let now = new Date();        	// 현재 날짜 및 시간
+        let hours = now.getHours().toString().padStart(2, "0");
+        let minutes = now.getMinutes().toString().padStart(2, "0");
+        let seconds = now.getSeconds().toString().padStart(2, "0");
+        document.querySelector("#now").innerText = `${hours}:${minutes}:${seconds}`;
+        
+
+        if(now.getHours()>12){
+            document.querySelector("#arm").innerText="PM";
+        }
+        else if(now.getHours()<12){
+            document.querySelector("#arm").innerText="AM";
+
+        }
+    }
+        setInterval(() => {
+            today(now);
+    }, 1000);
+   
+
+    function displayRemainingTime(targetDate) {
+	const now = new Date();
+    const endDate = new Date(targetDate);
+    const timeRemaining = endDate - now;
+ 
+    if (timeRemaining <= 0) {
+    	document.getElementById('timer').textContent = '시간 초과';
+      	return;
+    }
+ 
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+ 
+    document.getElementById('timer').textContent 
+    	= `${days}일 / ${hours}시간 ${minutes}분 ${seconds}초`;
+}
+ 
+// 타겟 날짜 설정 (예: 2023년 12월 31일 23:59:59)
+const targetDate = new Date('2024-10-22T23:59:59').getTime();
+ 
+// 1초마다 업데이트
+setInterval(() => {
+         displayRemainingTime(targetDate);
+}, 1000);
+        
+
+      
+            
+            
+        
+    </script>
+</body>
+</html>

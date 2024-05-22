@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType7.html</title>
+</head>
+<body>
+    <h1>javascript Data</h1>
+    <p> <strong>function</strong> type</p>
+    <script>
+        // function type data를 만드는 방법은 3가지가 있다.
+        // 1. 이름이 없는 함수를(익명함수) 생성해서 변수에 대입
+        let greet = function(){
+            console.log("즐거운 하루입니다.");
+        }
+        // 2. 이름이 없는 함수를 화살표 함수를 생성해서 변수에 대입
+        let greet2 = ()=>{
+            console.log("좋은 하루 되세요!");
+        };
+
+        // 3. 처음부터 이름이 있는 함수를 생성한다.
+        function greet3(){
+            console.log("행복한 하루 되세요!");
+        }
+    </script>
+</body>
+</html>

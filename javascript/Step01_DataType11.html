@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType11.html</title>
+</head>
+<body>
+    <h1>function type의 매개변수</h1>
+    <script>
+        let printMsg = function(msg){               // 1. printMsg 변수 생성 
+            // let msg = ??; 
+            console.log("----------------");       
+            console.log(msg);                       //3. msg 값에 hello 값 출력됨
+            console.log("----------------");
+        };
+ 
+        printMsg("hello");                          //2. hello라는 값을 function(msg) 값에 대입 
+        printMsg("bye");                                
+
+        // 매개변수 2개인 경우
+        let printSum = function(num1, num2){
+           
+            let result =num1+num2;                  // 매개변수에 전달된 2개의 값을 + 연산을 해서
+            
+            console.log(result);                    //결과값을 콘솔창에 출력
+
+            printSum(10, 20);
+            printSum(20, 300);
+        
+        };
+
+        let getSum = function(num1, num2){
+            //매개 변수에 전달된 두수의 합을 구하기
+            let result=num1+num2;
+            //결과값을 리턴하기
+            return result;
+        }
+
+        let result1 = getSum(10, 20);
+        let result2 = getSum(1000, -50)
+
+
+            
+    </script>
+</body>
+</html>

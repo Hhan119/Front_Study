@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_ControlStatement2.html</title>
+</head>
+<body>
+    <h1>if문 활용</h1>
+    <script>
+        // javascript에서는 어떤 변수 안에 있는 값이 있는지 null 값 인지 확인여부는 if문으로 학인할 수 있다.
+        // 값이 없을때(empty)로 판정되는 값
+        // 0, "", null, undefiend 이 4가지 값은 false랑 동일하다고 보면된다.
+
+        // null은 빈 공간을 나타내는 예약어이다.
+
+        let obj={name:"han"};
+        if(obj){
+            console.log(obj.name);
+        }
+
+        let obj2=null;
+        if(obj2){
+            console.log(obj2.name);
+        }
+    </script>    
+</body>
+</html>

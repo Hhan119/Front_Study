@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_document4.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id ="changeBtn">바꾸기</button>
+    <button id ="changeBtn2">바꾸기</button>
+    <div class="box">div1</div>
+    <div class="box">div2</div>
+    <div class="box">div3</div>
+    <div class="box">div4</div>
+    <div class="box">div5</div>
+    <script>
+    
+    document.querySelector("#changeBtn2").addEventListener("click", ()=>{
+        document.querySelectorAll(".box").forEach((item)=>{
+            item.style.backgroundColor="yellow";
+    
+        });
+    });
+
+
+    document.querySelector("#changeBtn").addEventListener("click", ()=>{
+        document.querySelectorAll(".box")[0].style.backgroundColor="blue";
+    /*
+        document.querySelectorAll(".box")[1].style.backgroundColor="blue";
+        document.querySelectorAll(".box")[2].style.backgroundColor="blue";
+        document.querySelectorAll(".box")[3].style.backgroundColor="blue";
+        document.querySelectorAll(".box")[4].style.backgroundColor="blue";
+    */
+    });
+    </script>
+</body>
+</html>

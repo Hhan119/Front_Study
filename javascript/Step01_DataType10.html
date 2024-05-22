@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType10.html</title>
+</head>
+<body>
+    <h1>type</h1>
+    <script>
+        function test(){
+            console.log("test() 호출됨");
+        }
+/*
+        let a = test(); // javascript에서 함수를 call 했으면 그 값은 어떤 값으로 대체가 된다.
+                        // 값이 없으면 undefined로 대체가 됨
+
+        let b = test;
+
+        let result = prompt(); // prompt 입력 전까지는 result 변수는 실행이 안되고, null 값으로 나옴 
+
+        let result2 = confirm(); // 실행시 예(true), 아니오(false) 선택창이 나옴
+*/
+
+        //number type 을 리턴하는 함수
+        function getNum(){
+            console.log("getNum() 호출됨") // 변수 안에 있는 값을 변수명으로 return 해줄수 있다.
+            return 999;   
+        }
+
+        //number type 을 리턴하는 함수
+        function getNum2(){
+            let num=999;
+            console.log("getNum() 호출됨")
+            return num;
+
+        }
+
+        function getName(){
+            console.log("getName() 호출됨")
+            return name;
+
+        }
+
+        function getName2(){
+            let name="첼시FC";
+            console.log("getName2() 호출됨")
+            return name;
+        }
+
+        // Boolean type return
+        function isEven(){
+            console.log("isEven() 호출됨") // 변수 안에 있는 값을 변수명으로 return 해줄수 있다.
+            return true;   
+        }
+
+    
+        function isEven2(){
+            let num=true;
+            console.log("isEven2() 호출됨")
+            return true;
+        }
+
+        // object type return
+        function getMember(){
+            let mem={num:1, name:"첼시", addr:"영국"};
+            console.log("getMember() 호출됨")
+            return mem;
+        }
+
+        // array type return
+        function getFriend(){
+            let friends=["첼시", "레알", "맨시티", "아스날"];
+            console.log("getFriend() 호출됨")
+            return friends;
+        }
+    
+        // Test object add
+        let myObj={
+            getData:function(){
+                console.log("getData() 호출됨")
+                let data={num:1, name:"첼시FC", addr:"영국"}
+                return data;
+
+            },
+            getDatas:function(){
+                console.log("getDatas() 호출됨")
+                let datas=["첼시", "레알", "맨시티", "바르셀로나"]
+                return datas;
+
+            }
+        };
+
+    </script>
+    
+</body>
+</html>

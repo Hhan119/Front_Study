@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_ControlStatement4.html</title>
+</head>
+<body>
+    <h1>다중 if문 Test</h1>
+    <input type="text" id="jumsu" placeholder="점수 입력...(0~100)">
+    <button onclick="check()">확인</button>
+    <button onclick="check2()">확인</button>
+    <button id="checkBtn">확인2</button>
+    <p>
+        <strong id="result">학점 입니다.</strong>
+    </p>
+    
+    <script>
+        /*
+            input 요소에 점수를 입력하고 확인 버튼을 눌렀을때 점수가 
+            90점 이상이면 "A"
+            80점 이상이면 "B"
+            70점 이상이면 "C"
+            60점 이상이면 "D"
+            그 이외의 경우에는 "F"라는 문자열을 출력
+            id가 result인 곳의 innertext로 출력
+        */
+
+
+        function check(){
+            let jumsu = document.querySelector("#jumsu").value;
+            if(jumsu >= 90){
+                document.querySelector("#result").innerText="A 학점입니다.";
+            }
+
+            if(jumsu >=80 && jumsu <90){
+                document.querySelector("#result").innerText="B 학점입니다.";
+            }
+
+            if(jumsu >=70 && jumsu <80){
+                document.querySelector("#result").innerText="C 학점입니다.";
+            }
+
+            if(jumsu >=60 && jumsu <70){
+                document.querySelector("#result").innerText="D 학점입니다.";
+                
+            }if(jumsu <60){
+                document.querySelector("#result").innerText="F 학점입니다.";
+            }      
+          
+        };
+        function check2(){
+            let jumsu = document.querySelector("#jumsu").value;
+            if(jumsu >= 90){
+                document.querySelector("#result").innerText="A 학점입니다.";
+            }
+
+            else if(jumsu > 80){
+                document.querySelector("#result").innerText="B 학점입니다.";
+            }
+
+            else if(jumsu > 70){
+                document.querySelector("#result").innerText="C 학점입니다.";
+            }
+
+            else if(jumsu > 60 ){
+                document.querySelector("#result").innerText="D 학점입니다.";
+    
+            }
+            else if(jumsu <50){
+                document.querySelector("#result").innerText="F 학점입니다.";
+            }      
+          
+        };
+
+        document.querySelector("#checkBtn").addEventListener("click", ()=>{  
+
+            let jumsu = document.querySelector("#jumsu").value;
+            if(jumsu >= 90){
+                document.querySelector("#result").innerText="A 학점입니다.";
+            }else if(jumsu >= 80){
+                document.querySelector("#result").innerText="B 학점입니다.";
+            }
+            else if(jumsu >= 70){
+                document.querySelector("#result").innerText="C 학점입니다.";
+            }
+            else if(jumsu >= 60){
+                document.querySelector("#result").innerText="D 학점입니다.";
+            }
+            else if(jumsu < 60){
+                document.querySelector("#result").innerText="F 학점입니다.";
+            }
+        });
+
+
+    </script>
+</body>
+</html>
