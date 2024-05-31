@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열 객체의 다양한 함수 활용</h1>
+
+    <script>
+        const names= ["첼시", "레알", "맨시티"];
+        // 위의 배열에 저장된 이름 뒤에 "님"을 모두 입력하세요
+        for(i=0; i<names.length; i++){
+            names[i]=names[i]+"님";
+        }
+
+        const original = ["첼시", "레알", "맨시티"];
+        const newArray = original.map((item)=>{
+            console.log("호출됨 : "+item);
+            return item+"님";
+        });
+
+        const newArray2 = original.map(item => item+"님");
+
+        const nums=[1, 5, 8, -10, -20, 10, 30];
+        const result = nums.filter(item => item >=0) ;
+        const result2 = result.map(item => item*item);
+
+        const result3 = nums.filter(item => item>=0).map(item => item **2);
+        
+        
+        
+     
+            
+    </script>
+</body>
+</html>

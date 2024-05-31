@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_JSON.html</title>
+</head>
+<body>  
+    <div class="container">
+    <h1>JSON 문자열 사용하기</h1>
+    <p>
+        <strong> Java Script Object Notation</strong> (자바스크립트 객체 표기법)
+        을 따르는 문자열을 JSON 문자열이라고 한다. 
+    </p>
+    </div>
+    <script>
+        // object type
+        const data1={num:1, name:"첼시"};
+        // String type
+        const data2=`{"num":2, "name":"레알"}`;
+       
+        const data3=[10, 20, 30];
+        const data4=`[10, 20, 30]`; 
+        const result4=JSON.parse(data4);
+        const data5=`["num":3, "name":"아스날"]`;
+        //const result5=JSON.parse(data5);
+        const info =`
+            {
+                "num":1,
+                "name":"첼시",
+                "isMan":true,
+                "addr":null,
+                "friends":["첼시","레알","아스날"],
+                "company":{
+                    "name":"에이콘 아카데미",
+                    "addr":"강남"
+                }
+            }
+        `;
+        // JSON 문자열을 이용해서 object 얻어내기
+        const result=JSON.parse(info);
+        let a = result.num;
+        let b = result.name;
+        let c = result.isMan;
+        let d = result.addr;
+        let e = result.isMan;
+        let f = result.friends;
+        let g = result.company; 
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_loop.html</title>
+</head>
+<body>
+    <div class="container">
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <p>p6</p>
+    <p>p7</p>
+    <p>p8</p>
+    <p>p9</p>
+    <p>p10</p>
+    <button id="changeBtn">바꾸기</button>
+    <button id="changeBtn2">바꾸기</button>
+    <button id="changeBtn3">바꾸기</button>
+    <script>
+        // 바꾸기 버튼을 눌렀을 때 모든 p 요소의 글자 색을 red로 변경해보세요
+        document.querySelector("#changeBtn").addEventListener("click", ()=>{
+        //모든 p요소의 참조값을 순서대로 담은 배열 얻어내기
+        const ps = document.querySelectorAll("p");
+        //반복문 돌면서 
+        for(let i=0; i<ps.length; i++){
+            //i번째 p요소의 참조값을 얻어내서 
+            let tmp = ps[i];
+            //글자색을 변경하기
+            tmp.style.color="red";
+            }
+        });
+        document.querySelector("#changeBtn2").addEventListener("click", ()=>{
+            // 모든 p 요소의 참조값을 순서대로 당은 배열 얻어내기
+            const ps = document.querySelectorAll("p")
+            for(const tmp of ps){
+                tmp.style.backgroundColor="yellow";
+            }
+        });
+
+            document.querySelector("#changeBtn3").addEventListener("click", ()=>{
+            // 모든 p 요소의 참조값을 순서대로 당은 배열 얻어내기
+            const ps = document.querySelectorAll("p")
+            //배열의 forEach()함수를 호출하면서 함수를 넣어주면, 해당 함수는 배열의 아이템의 갯수만큼 호출되고 매개 변수에는 item과 해당 아이템의 index 값이 전달된다.
+            for(i=0; i<nams.length; i++){
+                names[i]= name[i]+"님";
+            }
+            });
+        
+
+    </script>
+</div>
+</body>
+</html>

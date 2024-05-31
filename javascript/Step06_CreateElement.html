@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 768px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>문서요소를 필요한 시점에 만들어서 원하는 위치에 넣기</h1>
+        <input type="text" placeholder="입력.." id="inputTodo">
+        <button id="addBtn">추가</button>
+        <button id="addBtn2">추가2</button>
+        <button id="addBtn3">추가3</button>
+        <button id="addBtn4">추가4</button>
+        <button id="addBtn5">추가5</button>
+        <ol>
+           
+        </ol>
+    </div>
+    <script>
+        document.querySelector("#addBtn").addEventListener("click", ()=>{
+            let a = document.createElement("li");
+            let aa = document.querySelector("#inputTodo").value;
+            a.innerText = aa;
+            document.querySelector("ol").append(a);
+        });
+        
+        document.querySelector("#addBtn2").addEventListener("click", ()=>{
+            const b = document.createElement("li");
+            const todo =document.querySelector("#inputTodo").value;
+            b.innerText = todo; 
+            document.querySelector("ol").insertAdjacentElement("afterbegin", b);
+        });
+
+        document.querySelector("#addBtn3").addEventListener("click", ()=>{
+            const msg = document.querySelector("#inputTodo").value;
+            //const html = "<li>"+msg+"</<li>";
+            const html = `<li>${msg}</li>`;
+            document.querySelector("ol").insertAdjacentHTML("beforeend", html)
+            
+        });
+
+        document.querySelector("#addBtn4").addEventListener("click", ()=>{
+            const msg = document.querySelector("#inputTodo").value;
+            const html = `<li>${msg}</li>`;
+            document.querySelector("ol").innerHTML=html;
+        });
+
+        document.querySelector("#addBtn5").addEventListener("click", ()=>{
+            const msg = document.querySelector("#inputTodo").value;
+            const html = `<li>${msg}</li>`;
+            document.querySelector("ol").innerText=html;
+        });
+        
+    </script>
+</body>
+</html>
+      

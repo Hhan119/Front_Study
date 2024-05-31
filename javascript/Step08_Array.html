@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_Array.html</title>
+</head>
+<body>
+    <h1> 배열 객체의 다양한 함수 활용</h1>
+    <script>
+        let nums=[-10, 20, -15, -5, 30];
+        // 위의 배열에서 0 보다 큰 숫자만 남기고 나머지는 제거
+        // nums.splice(제거할 인덱스, 해당 인덱스로부터 제거할 갯수)
+        // nums.splice(3,1) => 3번 인덱스로 부터 1개 제거
+        for(let i=nums.length-1; i>=0; i--){
+            if(nums[i] <= 0){
+                nums.splice(i, 1);
+            }
+        }
+
+        let original =[-10, 20, -15, -5, 30]; 
+        let newArray = original.filter((item)=>{
+            console.log('호출됨 : '+item);
+            return item >= 0;
+        }); 
+
+        let newArray2 = original.filter(item = item >= 0);
+    </script>
+</body>
+</html>
